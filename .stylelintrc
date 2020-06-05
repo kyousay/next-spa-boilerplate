@@ -1,0 +1,26 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended",
+    "stylelint-config-styled-components"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "indentation": "tab",
+    "declaration-no-important": true,
+    "selector-max-universal": 0,
+    "selector-max-id": 0,
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
+    "block-no-empty": null,
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "order/properties-alphabetical-order": true,
+    "declaration-colon-newline-after": null
+  }
+}
