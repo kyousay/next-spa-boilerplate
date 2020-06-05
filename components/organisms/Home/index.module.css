@@ -1,0 +1,7 @@
+.root {
+	color: blue;
+
+	.message {
+		font-size: 20px;
+	}
+}

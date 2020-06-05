@@ -1,7 +1,3 @@
-import React from 'react';
-
-const Home: React.FC = function HomePage() {
-	return <div>Welcome to Next.js!</div>;
-};
+import Home from '../components/organisms/Home';
 
 export default Home;
