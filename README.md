@@ -5,3 +5,4 @@
 - [ ] storybook
 - [ ] ModalHOC
 - [ ] DialogHOC
+- [ ] Build as Static CSR SPA
