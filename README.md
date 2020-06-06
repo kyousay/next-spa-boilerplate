@@ -1,9 +1,11 @@
 TODOS
-- [ ] fetchMiddleware
+- [x] fetchMiddleware
 - [ ] analyticsMiddleware
-- [ ] effects-steps
+- [x] effects-steps
 - [ ] jest testing
 - [ ] storybook
+- [ ] form validation
 - [ ] ModalHOC
-- [ ] DialogHOC
+- [ ] D&D
+- [ ] Wysiwyg
 - [ ] Build as Static CSR SPA
