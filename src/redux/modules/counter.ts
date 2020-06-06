@@ -19,6 +19,6 @@ const reducer = reducerWithInitialState(INITIAL_STATE)
 export default reducer;
 
 export const selectCount = createSelector(
-	(state: RootState) => state.counter,
+	(state: RootState) => state.resources.counter,
 	(counter) => counter.count,
 );

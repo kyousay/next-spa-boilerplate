@@ -32,6 +32,6 @@ const reducer = reducerWithInitialState(INITIAL_STATE).case(
 export default reducer;
 
 export const selectTest = createSelector(
-	(state: RootState) => state.test,
+	(state: RootState) => state.resources.test,
 	(test) => test.data.name,
 );
