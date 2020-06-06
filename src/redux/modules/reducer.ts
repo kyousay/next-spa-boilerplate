@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux';
 import counter from './counter';
+import test from './test';
 
 const reducer = combineReducers({
-	counter,
+	resources: combineReducers({
+		counter,
+		test,
+	}),
 });
 
 export type RootState = ReturnType<typeof reducer>;

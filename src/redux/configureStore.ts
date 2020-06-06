@@ -1,6 +1,8 @@
 import { useMemo } from 'react';
 import { compose, Store, createStore, applyMiddleware } from 'redux';
 import reducer, { RootState } from './modules/reducer';
+import stepsMiddleware from 'redux-effects-steps';
+import axiosMiddleware from './middlewares/redux-effects-axios';
 
 let store: Store | null;
 
@@ -18,7 +20,7 @@ function initStore(preloadedState = {}) {
 	return createStore(
 		reducer,
 		preloadedState,
-		composeEnhancer(applyMiddleware()),
+		composeEnhancer(applyMiddleware(stepsMiddleware, axiosMiddleware())),
 	);
 }
 
