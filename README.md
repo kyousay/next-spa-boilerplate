@@ -3,7 +3,7 @@ TODOS
 - [ ] analyticsMiddleware
 - [x] effects-steps
 - [ ] jest testing
-- [ ] storybook
+- [x] storybook
 - [ ] form validation
 - [ ] ModalHOC
 - [ ] D&D
