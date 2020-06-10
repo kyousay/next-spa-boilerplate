@@ -1,4 +1,9 @@
-TODOS
+# Quick start
+npm i
+npm run dev
+npm run storybook
+
+# TODOS
 - [x] fetchMiddleware
 - [ ] analyticsMiddleware
 - [x] effects-steps
