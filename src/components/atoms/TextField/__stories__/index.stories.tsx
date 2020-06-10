@@ -8,6 +8,7 @@ storiesOf('atoms/Anchor', module) //
 		const [val, setVal] = useState('');
 		return (
 			<TextField
+				name="test"
 				placeholder="a"
 				value={val}
 				onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
