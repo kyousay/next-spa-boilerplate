@@ -1,0 +1,7 @@
+.todo_field {
+	width: 500px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
