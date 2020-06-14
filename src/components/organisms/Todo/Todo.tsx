@@ -12,6 +12,7 @@ type Props = {
 	onChange: (index: number, checked: boolean) => void;
 	onSubmit: (id: string, text: string) => void;
 	deleteHandler: (index: number) => void;
+	editHandler: (index: number, text: string) => void;
 };
 
 type Inputs = {
@@ -19,7 +20,7 @@ type Inputs = {
 };
 
 const Todo: React.FC<Props> = (props) => {
-	const { todos, onChange, onSubmit, deleteHandler } = props;
+	const { todos, onChange, onSubmit, deleteHandler, editHandler } = props;
 	const { register, setValue, handleSubmit, watch, errors } = useForm<
 		Inputs
 	>();
@@ -32,6 +33,7 @@ const Todo: React.FC<Props> = (props) => {
 					onChange={() => onChange(index, !todo.checked)}
 					index={index}
 					deleteHandler={deleteHandler}
+					editHandler={editHandler}
 				/>
 			))}
 			{errors.todo && <span>This field is required</span>}

@@ -4,13 +4,14 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 
 storiesOf('molecules/Todo', module).add('todoItem', () => {
+	const [text01, changeText] = useState('Test');
 	const [checked, changeChecked] = useState(false);
 	const [Delete, changeDelete] = useState(true);
 	return (
 		<>
 			{Delete && (
 				<TodoItem
-					text="Test"
+					text={text01}
 					{...{
 						id: 'todo01',
 						index: 0,
@@ -22,6 +23,10 @@ storiesOf('molecules/Todo', module).add('todoItem', () => {
 						deleteHandler: (index: number) => {
 							changeDelete(false);
 							action('deleteHanlder');
+						},
+						editHandler: (index: number, text: string) => {
+							changeText(text);
+							action('editHandler');
 						},
 					}}
 				/>

@@ -19,13 +19,20 @@ type DeletePayload = {
 	index: number;
 };
 
+type ChangeTextPayload = {
+	index: number;
+	text: string;
+};
+
 export const addTodo = actionCreator<ChangePayload>('ADDTODO');
 
 export const changeChecked = actionCreator<ChangeCheckedPayload>(
-	'ChengeChecked',
+	'CHANGECHECKED',
 );
 
 export const deleteTodo = actionCreator<DeletePayload>('DELETETODO');
+
+export const changeText = actionCreator<ChangeTextPayload>('CHANGETEXT');
 
 const INITIAL_STATE = {
 	todos: [
@@ -61,6 +68,14 @@ const reducer = reducerWithInitialState(INITIAL_STATE)
 	.case(deleteTodo, (state, payload) => {
 		const newTodos = [...state.todos];
 		newTodos.splice(payload.index, 1);
+		return {
+			...state,
+			todos: newTodos,
+		};
+	})
+	.case(changeText, (state, payload) => {
+		const newTodos = [...state.todos];
+		newTodos[payload.index].text = payload.text;
 		return {
 			...state,
 			todos: newTodos,

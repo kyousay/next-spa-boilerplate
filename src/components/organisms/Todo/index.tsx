@@ -5,6 +5,7 @@ import {
 	changeChecked,
 	selectTodos,
 	deleteTodo,
+	changeText,
 } from '../../../redux/modules/todo';
 import Todo from './Todo';
 
@@ -28,6 +29,9 @@ const Component: React.FC = () => {
 				);
 			}}
 			deleteHandler={(index: number) => dispatch(deleteTodo({ index }))}
+			editHandler={(index: number, text: string) =>
+				dispatch(changeText({ index, text }))
+			}
 		/>
 	);
 };
