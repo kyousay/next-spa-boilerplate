@@ -10,7 +10,22 @@ type ChangePayload = {
 	checked: false;
 };
 
+type ChangeCheckedPayload = {
+	index: number;
+	checked: boolean;
+};
+
+type DeletePayload = {
+	index: number;
+};
+
 export const addTodo = actionCreator<ChangePayload>('ADDTODO');
+
+export const changeChecked = actionCreator<ChangeCheckedPayload>(
+	'ChengeChecked',
+);
+
+export const deleteTodo = actionCreator<DeletePayload>('DELETETODO');
 
 const INITIAL_STATE = {
 	todos: [
@@ -27,16 +42,30 @@ const INITIAL_STATE = {
 	],
 };
 
-const reducer = reducerWithInitialState(INITIAL_STATE).case(
-	addTodo,
-	(state, payload) => {
+const reducer = reducerWithInitialState(INITIAL_STATE)
+	.case(addTodo, (state, payload) => {
 		const newTodos = state.todos.concat(payload);
 		return {
 			...state,
 			todos: newTodos,
 		};
-	},
-);
+	})
+	.case(changeChecked, (state, payload) => {
+		const newTodos = [...state.todos];
+		newTodos[payload.index].checked = payload.checked;
+		return {
+			...state,
+			todos: newTodos,
+		};
+	})
+	.case(deleteTodo, (state, payload) => {
+		const newTodos = [...state.todos];
+		newTodos.splice(payload.index, 1);
+		return {
+			...state,
+			todos: newTodos,
+		};
+	});
 
 export default reducer;
 

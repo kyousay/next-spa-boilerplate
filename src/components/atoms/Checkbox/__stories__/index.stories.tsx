@@ -9,8 +9,8 @@ storiesOf('atoms/Todo', module).add('checkbox', () => {
 		<Checkbox
 			id="todo01"
 			checked={checked}
-			onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-				changeChecked(e.target.checked);
+			onChange={(e?: React.ChangeEvent<HTMLInputElement>) => {
+				changeChecked(!checked);
 				action('onChange')(e);
 			}}
 		/>

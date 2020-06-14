@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useForm } from 'react-hook-form';
 import { TodoItem } from '../../molecules/TodoItem';
+import style from './index.module.css';
 
 type Props = {
 	todos: {
@@ -7,21 +9,40 @@ type Props = {
 		text: string;
 		checked: boolean;
 	}[];
-	onChange: (e?: React.ChangeEvent<HTMLInputElement>) => void;
+	onChange: (index: number, checked: boolean) => void;
+	onSubmit: (id: string, text: string) => void;
+	deleteHandler: (index: number) => void;
+};
+
+type Inputs = {
+	todo: string;
 };
 
 const Todo: React.FC<Props> = (props) => {
-	const { todos, onChange } = props;
+	const { todos, onChange, onSubmit, deleteHandler } = props;
+	const { register, setValue, handleSubmit, watch, errors } = useForm<
+		Inputs
+	>();
 	return (
-		<div>
+		<div className={style.todo_field}>
 			{todos.map((todo, index) => (
 				<TodoItem
 					key={todo.id}
 					{...todo}
-					onChange={onChange}
+					onChange={() => onChange(index, !todo.checked)}
 					index={index}
+					deleteHandler={deleteHandler}
 				/>
 			))}
+			{errors.todo && <span>This field is required</span>}
+			<form
+				onSubmit={handleSubmit(() => {
+					onSubmit(`todo${todos.length + 1}`, watch('todo'));
+					setValue('todo', '');
+				})}>
+				<input name="todo" ref={register({ required: true })} />
+				<input type="submit" />
+			</form>
 		</div>
 	);
 };
