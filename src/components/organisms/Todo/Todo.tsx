@@ -24,6 +24,7 @@ const Todo: React.FC<Props> = (props) => {
 	const { register, setValue, handleSubmit, watch, errors } = useForm<
 		Inputs
 	>();
+	console.log('Todo');
 	return (
 		<div className={style.todo_field}>
 			{todos.map((todo, index) => (

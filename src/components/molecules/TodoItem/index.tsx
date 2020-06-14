@@ -21,6 +21,7 @@ export const TodoItem: React.FC<Props> = (props) => {
 	} = props;
 	const [isEdit, changeIsEdit] = useState(true);
 	const [nowText, changeText] = useState(text);
+	console.log('TodoItem');
 	return (
 		<div className={style.todo_row}>
 			<Checkbox {...{ id, checked, onChange }} />
