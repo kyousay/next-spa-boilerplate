@@ -1,3 +1,3 @@
-import Home from '../components/organisms/Home';
+import Todo from '../components/organisms/Todo';
 
-export default Home;
+export default Todo;

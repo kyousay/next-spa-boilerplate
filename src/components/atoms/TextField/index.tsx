@@ -5,16 +5,9 @@ type Props = {
 	name: string;
 	value: string;
 	placeholder: string;
-	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	onChange: (e?: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const TextField: React.FC<Props> = (props) => {
-	return (
-		<input
-			name={props.name}
-			className={styles.root}
-			type="text"
-			{...props}
-		/>
-	);
+	return <input className={styles.root} type="text" {...props} />;
 };

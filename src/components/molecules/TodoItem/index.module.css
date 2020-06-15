@@ -1,0 +1,11 @@
+.todo_row {
+	display: flex;
+	align-items: center;
+	padding: 5px;
+}
+
+.deleteButton {
+	font-size: 10px;
+	margin-left: 10px;
+	padding: 2px;
+}
