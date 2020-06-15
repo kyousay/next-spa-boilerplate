@@ -1,0 +1,19 @@
+.default {
+	color: #000;
+}
+
+.error {
+	color: #FF0000;
+}
+
+.s {
+	font-size: 10px;
+}
+
+.m {
+	font-size: 12px;
+}
+
+.l {
+	font-size: 14px;
+}

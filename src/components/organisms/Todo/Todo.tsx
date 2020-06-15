@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { TodoItem } from '../../molecules/TodoItem';
 import style from './index.module.css';
+import { Text } from '../../atoms/Text';
 
 type Props = {
 	todos: {
@@ -24,7 +25,6 @@ const Todo: React.FC<Props> = (props) => {
 	const { register, setValue, handleSubmit, watch, errors } = useForm<
 		Inputs
 	>();
-	console.log('Todo');
 	return (
 		<div className={style.todo_field}>
 			{todos.map((todo, index) => (
@@ -37,7 +37,11 @@ const Todo: React.FC<Props> = (props) => {
 					editHandler={editHandler}
 				/>
 			))}
-			{errors.todo && <span>This field is required</span>}
+			{errors.todo && (
+				<Text role="error" size="l">
+					This field is required
+				</Text>
+			)}
 			<form
 				onSubmit={handleSubmit(() => {
 					onSubmit(`todo${todos.length + 1}`, watch('todo'));
