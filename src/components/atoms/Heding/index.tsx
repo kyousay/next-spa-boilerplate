@@ -8,12 +8,9 @@ type Props = {
 
 const HeadingFactory: (role?: string) => React.FC<Props> = (
 	role = 'default',
-) => ({ Tag = 'h2', className = 'default', children }) => {
+) => ({ Tag = 'h2', children }) => {
 	return (
-		<Tag
-			className={`${styles[role]} ${styles[`heading_${Tag}`]} ${
-				styles[className]
-			}`}>
+		<Tag className={`${styles[role]} ${styles[`heading_${Tag}`]}`}>
 			{children}
 		</Tag>
 	);
