@@ -5,6 +5,7 @@ import { TextField } from '../../atoms/TextField';
 
 import { SelectedRegistration } from '../../../redux/modules/registration';
 import Header from '../Header';
+import Footer from '../Footer';
 type Props = {
 	count: number;
 	name: string;
@@ -49,6 +50,7 @@ const Home: React.FC<Props> = (props) => {
 					placeholder="Confirm Mail"
 				/>
 			</div>
+			<Footer />
 		</div>
 	);
 };
