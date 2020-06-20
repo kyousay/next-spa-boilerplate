@@ -1,0 +1,10 @@
+.headerWrapper {
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	padding: 20px;
+	background-color: #000;
+}
