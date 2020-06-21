@@ -1,0 +1,15 @@
+.default {
+
+}
+.filter {
+	width: 30px;
+	height: 30px;
+}
+.delete {
+	width: 30px;
+	height: 30px;
+}
+.add {
+	width: 30px;
+	height: 30px;
+}
