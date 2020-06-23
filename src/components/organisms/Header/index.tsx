@@ -1,18 +1,10 @@
 import React from 'react';
-import styles from './index.module.css';
-import { Img } from '../../atoms/Img';
+import Header from './Header';
+import { useRouter } from 'next/router';
 
-const Header: React.FC = () => {
-	return (
-		<div className={styles.headerWrapper}>
-			<Img
-				src={'/HeaderLogo.png'}
-				alt={'R-CloudSearch'}
-				width={'180'}
-				height={'29'}
-			/>
-		</div>
-	);
+const Component: React.FC = () => {
+	const currentPath = useRouter().pathname;
+	return <Header currentPath={currentPath} />;
 };
 
-export default Header;
+export default Component;

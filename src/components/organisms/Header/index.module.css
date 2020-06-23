@@ -1,6 +1,22 @@
 .headerWrapper {
 	display: flex;
+	justify-content: space-between;
 	width: 100%;
 	padding: 15px 50px;
+	box-sizing: border-box;
 	background-color: #000;
+}
+
+.headerLinkWrapper {
+	display: flex;
+}
+
+.headerLink {
+	padding: 0 6px;
+	display: flex;
+	align-items: center;
+}
+
+.headerLink:not(:first-child) {
+	border-left: 1px solid #fff;
 }

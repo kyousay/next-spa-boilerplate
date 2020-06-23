@@ -1,17 +1,30 @@
 import React from 'react';
-import styles from './index.module.css';
 
 type Props = {
+	src: string;
+	alt?: string;
 	className?: string;
+	height?: string;
+	width?: string;
+	onClick?: () => void;
 };
 
-export const IconFactory: (role: string, src: string) => React.FC<Props> = (
-	role,
+export const Icon: React.FC<Props> = ({
 	src,
-) => ({ className = 'default' }) => {
-	return <img src={src} className={`${styles[role]} ${styles[className]}`} />;
+	alt,
+	className,
+	height = '20',
+	width = '20',
+	onClick,
+}) => {
+	return (
+		<img
+			className={className}
+			src={src}
+			width={width}
+			height={height}
+			alt={alt}
+			onClick={onClick}
+		/>
+	);
 };
-
-export const FilterIcon = IconFactory('filter', '/filter.png');
-export const DeleteIcon = IconFactory('delete', '/delete.png');
-export const AddIcon = IconFactory('add', '/add.png');
