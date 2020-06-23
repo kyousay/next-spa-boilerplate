@@ -1,11 +1,16 @@
 import React from 'react';
 import styles from './index.module.css';
-import HeaderLogo from '../../atoms/Heding';
+import { Img } from '../../atoms/Img';
 
 const Header: React.FC = () => {
 	return (
 		<div className={styles.headerWrapper}>
-			<HeaderLogo Tag={'h1'}>R-Cloud Search</HeaderLogo>
+			<Img
+				src={'/HeaderLogo.png'}
+				alt={'R-CloudSearch'}
+				width={'180'}
+				height={'29'}
+			/>
 		</div>
 	);
 };
