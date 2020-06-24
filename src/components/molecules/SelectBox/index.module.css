@@ -1,0 +1,26 @@
+.root {
+	position: relative;
+}
+
+.select_box {
+	position: relative;
+	appearance: none;
+	-webkit-appearance: none;
+	padding: 10px 20px 10px 10px;
+	font-size: 12px;
+	outline: none;
+	border-top: 3px solid #000;
+	border-bottom: 3px solid #000;
+	border-right: 3px solid #000;
+}
+
+.select_box_head {
+	max-width: 100px;
+	border-left: 3px solid #000;
+}
+
+.select_box_body {
+	width: 100%;
+}
+
+

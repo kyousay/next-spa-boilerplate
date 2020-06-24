@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './index.module.css';
 
 type Props = {
 	src: string;
@@ -40,4 +41,10 @@ export const SearchSectionIcon = IconFactory({
 	src: '/icon/searchSection.png',
 	width: '1070',
 	height: '45',
+});
+export const SelectArrowIcon = IconFactory({
+	src: '/icon/selectArrow.png',
+	width: '5',
+	height: '5',
+	className: styles['selectArrow'],
 });

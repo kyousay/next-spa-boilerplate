@@ -4,7 +4,7 @@ import styles from './index.module.css';
 type Props = {
 	name: string;
 	value: string;
-	placeholder: string;
+	placeholder?: string;
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 

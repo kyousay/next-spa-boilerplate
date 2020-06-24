@@ -13,14 +13,14 @@ type Props = {
 const Header: React.FC<Props> = (props) => {
 	const { currentPath } = props;
 	return (
-		<div className={styles.headerWrapper}>
+		<div className={styles.header_wrapper}>
 			<Link path={'/'}>
 				<HeaderLogo />
 			</Link>
-			<div className={styles.headerLinkWrapper}>
+			<div className={styles.header_link_wrapper}>
 				{dummyPaths.map((path) => {
 					return (
-						<div key={path} className={styles.headerLink}>
+						<div key={path} className={styles.header_link}>
 							<Link path={path}>
 								{path === currentPath ? (
 									<HeaderActiveLinkText>

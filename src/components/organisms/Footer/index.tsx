@@ -4,7 +4,7 @@ import { FooterLogoText } from '../../atoms/Text';
 
 const Footer: React.FC = () => {
 	return (
-		<div className={styles.footerWrapper}>
+		<div className={styles.footer_wrapper}>
 			<FooterLogoText>＠hogehoge</FooterLogoText>
 		</div>
 	);
