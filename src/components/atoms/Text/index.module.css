@@ -1,8 +1,8 @@
 .header_link {
 	color: #fff;
 }
-
 .header_link.is-active {
+	font-weight: bold;
 	position: relative;
 }
 .header_link.is-active::after {

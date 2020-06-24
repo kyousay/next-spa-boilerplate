@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Link from '../';
-import { Text } from '../../../atoms/Text';
-import textStyle from '../../../atoms/Text/index.module.css';
+import { HeaderLinkText, HeaderActiveLinkText } from '../../../atoms/Text';
 
 storiesOf('molecules/Link', module)
 	.add('HeaderLink - 非選択', () => {
@@ -14,7 +13,7 @@ storiesOf('molecules/Link', module)
 					padding: '20px',
 				}}>
 				<Link path={'RedShift'}>
-					<Text className={textStyle['header_link']}>RedShift</Text>
+					<HeaderLinkText>RedShift</HeaderLinkText>
 				</Link>
 			</div>
 		);
@@ -28,10 +27,7 @@ storiesOf('molecules/Link', module)
 					padding: '20px',
 				}}>
 				<Link path={'RedShift'}>
-					<Text
-						className={`${textStyle['header_link']} ${textStyle['is-active']}`}>
-						RedShift
-					</Text>
+					<HeaderActiveLinkText>RedShift</HeaderActiveLinkText>
 				</Link>
 			</div>
 		);

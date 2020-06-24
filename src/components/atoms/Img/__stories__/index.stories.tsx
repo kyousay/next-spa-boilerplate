@@ -1,9 +1,15 @@
 import React from 'react';
-import { Img } from '../';
-import HeaderLogo from '../../../../../public/HeaderLogo.png';
+import { ImgFactory } from '../';
+import headerLogo from '../../../../../public/HeaderLogo.png';
 import { storiesOf } from '@storybook/react';
 
 storiesOf('atoms/Img', module).add('HeaderLogo', () => {
+	const HeaderLogo = ImgFactory({
+		src: headerLogo,
+		alt: 'R-CloudSearch',
+		width: '180',
+		height: '29',
+	});
 	return (
 		<div
 			style={{
@@ -11,12 +17,7 @@ storiesOf('atoms/Img', module).add('HeaderLogo', () => {
 				backgroundColor: '#000',
 				display: 'inline-block',
 			}}>
-			<Img
-				src={HeaderLogo}
-				alt={'R-CloudSearch'}
-				width={'180'}
-				height={'29'}
-			/>
+			<HeaderLogo />
 		</div>
 	);
 });

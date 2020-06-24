@@ -6,7 +6,8 @@ import { TextField } from '../../atoms/TextField';
 import { SelectedRegistration } from '../../../redux/modules/registration';
 import Header from '../Header';
 import Footer from '../Footer';
-import { Icon } from '../../atoms/Icon';
+import { FilterIcon } from '../../atoms/Icon';
+
 type Props = {
 	count: number;
 	name: string;
@@ -27,7 +28,7 @@ const Home: React.FC<Props> = (props) => {
 		<div className={styles.root}>
 			<Header />
 			<div className={styles.iconWrapper}>
-				<Icon src={'/icon/filter.png'} />
+				<FilterIcon />
 			</div>
 			<div className={styles.main}>
 				Welcome to Next.js!!! {name} and count is {count}

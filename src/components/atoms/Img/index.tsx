@@ -8,6 +8,15 @@ type Props = {
 	height?: string;
 };
 
-export const Img: React.FC<Props> = (props) => {
+export const ImgFactory: <T>(props: Props) => React.FC = (
+	props,
+) => (): ReturnType<React.FC> => {
 	return <img {...props} />;
 };
+
+export const HeaderLogo = ImgFactory({
+	src: '/HeaderLogo.png',
+	width: '180',
+	height: '29',
+	alt: 'R-CloudSearch',
+});

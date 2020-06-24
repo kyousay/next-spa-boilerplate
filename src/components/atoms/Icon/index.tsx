@@ -6,25 +6,38 @@ type Props = {
 	className?: string;
 	height?: string;
 	width?: string;
-	onClick?: () => void;
+	onClick?: (e: React.MouseEvent<HTMLImageElement>) => void;
 };
 
-export const Icon: React.FC<Props> = ({
-	src,
-	alt,
-	className,
-	height = '20',
-	width = '20',
-	onClick,
-}) => {
-	return (
-		<img
-			className={className}
-			src={src}
-			width={width}
-			height={height}
-			alt={alt}
-			onClick={onClick}
-		/>
-	);
+export const IconFactory: (props: Props) => React.FC = (
+	props,
+) => (): ReturnType<React.FC> => {
+	return <img width={'20'} height={'20'} {...props} />;
 };
+
+export const FilterIcon = IconFactory({ src: '/icon/filter.png' });
+export const DeleteIcon = IconFactory({
+	src: '/icon/delete.png',
+	width: '35',
+	height: '35',
+});
+export const AddIcon = IconFactory({
+	src: '/icon/add.png',
+	width: '35',
+	height: '35',
+});
+export const DataTableIcon = IconFactory({
+	src: '/icon/dataTable.png',
+	width: '45',
+	height: '45',
+});
+export const ArrangeIcon = IconFactory({
+	src: '/icon/arrange.png',
+	width: '35',
+	height: '35',
+});
+export const SearchSectionIcon = IconFactory({
+	src: '/icon/searchSection.png',
+	width: '1070',
+	height: '45',
+});
