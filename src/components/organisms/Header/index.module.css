@@ -1,0 +1,21 @@
+.headerWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 15px 50px;
+	box-sizing: border-box;
+	background-color: #000;
+}
+
+.header_link_list {
+	display: flex;
+}
+
+.header_link_list_item {
+	padding: 2px 6px;
+}
+
+.header_link_list_item:not(:first-child) {
+	border-left: 1px solid #fff;
+}
