@@ -1,6 +1,11 @@
-.footer_wrapper {
+.root {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
+}
+
+.root_text {
+	color: #000;
+	font-size: 14px;
 }

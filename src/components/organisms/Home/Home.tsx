@@ -7,7 +7,6 @@ import { SelectedRegistration } from '../../../redux/modules/registration';
 import Header from '../Header';
 import Footer from '../Footer';
 import SearchPanel from '../SearchPanel/SearchPanel';
-import { FilterIcon } from '../../atoms/Icon';
 
 type Props = {
 	count: number;
@@ -28,9 +27,6 @@ const Home: React.FC<Props> = (props) => {
 	return (
 		<div className={styles.root}>
 			<Header />
-			<div className={styles.icon_wrapper}>
-				<FilterIcon />
-			</div>
 			<SearchPanel />
 			<div className={styles.main}>
 				Welcome to Next.js!!! {name} and count is {count}

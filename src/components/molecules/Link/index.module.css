@@ -1,7 +1,7 @@
-.default {
+.root {
 	text-decoration: none;
 }
 
-.default:hover {
+.root:hover {
 	opacity: 0.7;
 }

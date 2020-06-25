@@ -16,7 +16,3 @@ export const Text = TextFacotry();
 export const HeaderLinkText = TextFacotry('header_link');
 export const HeaderActiveLinkText = TextFacotry('header_link', 'is-active');
 export const FooterLogoText = TextFacotry('footer_logo');
-
-// export const Text: React.FC<Props> = ({ className, children }) => {
-// 	return <span className={className}>{children}</span>;
-// };

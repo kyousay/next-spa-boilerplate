@@ -1,4 +1,42 @@
 .root {
-	display: flex;
-	width: 300px;
+	position: relative;
+	max-width: 1070px;
+	padding: 80px 35px;
+	margin: 0 auto;
 }
+
+.search_icon {
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.search_section_list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.search_section {
+	display: flex;
+	width: 305px;
+}
+
+.search_section:not(:nth-of-type(3n + 1)) {
+	margin-left: 40px;
+}
+
+.search_section:nth-of-type(n + 4) {
+	margin-top: 30px;
+}
+
+.search_section_icon {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+

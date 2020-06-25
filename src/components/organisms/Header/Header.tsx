@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './index.module.css';
-import { HeaderLogo } from '../../atoms/Img';
-import Link from '../../molecules/Link';
+import { Link } from '../../molecules/Link';
 import { HeaderLinkText, HeaderActiveLinkText } from '../../atoms/Text/';
 
 const dummyPaths = ['EC2', 'RDS', 'RedShift'];
@@ -14,10 +13,15 @@ const Header: React.FC<Props> = (props) => {
 	const { currentPath } = props;
 	return (
 		<div className={styles.header_wrapper}>
-			<Link path={'/'}>
-				<HeaderLogo />
-			</Link>
-			<div className={styles.header_link_wrapper}>
+			<div className={styles.header_logo}>
+				<img
+					src={'/HeaderLogo.png'}
+					width={'180'}
+					height={'29'}
+					alt={'R-CloudSearch'}
+				/>
+			</div>
+			<ul className={styles.header_link_wrapper}>
 				{dummyPaths.map((path) => {
 					return (
 						<div key={path} className={styles.header_link}>
@@ -33,7 +37,7 @@ const Header: React.FC<Props> = (props) => {
 						</div>
 					);
 				})}
-			</div>
+			</ul>
 		</div>
 	);
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Link from '../';
+import { Link } from '../';
 import { HeaderLinkText, HeaderActiveLinkText } from '../../../atoms/Text';
 
 storiesOf('molecules/Link', module)

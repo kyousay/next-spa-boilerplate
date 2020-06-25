@@ -8,6 +8,11 @@
 	background-color: #000;
 }
 
+.header_logo {
+	font-size: 20px;
+	font-weight: bold;
+}
+
 .header_link_wrapper {
 	display: flex;
 }

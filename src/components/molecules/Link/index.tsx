@@ -1,18 +1,15 @@
 import React from 'react';
 import styles from './index.module.css';
-import Link from 'next/link';
+import { default as Next__Link } from 'next/link';
 
 type Props = {
 	path: string;
 };
 
-// Linkが名前かぶるため
-const Component: React.FC<Props> = ({ path, children }) => {
+export const Link: React.FC<Props> = ({ path, children }) => {
 	return (
-		<Link href={path} passHref>
-			<a className={styles.default}>{children}</a>
-		</Link>
+		<Next__Link href={path} passHref>
+			<a className={styles.root}>{children}</a>
+		</Next__Link>
 	);
 };
-
-export default Component;
